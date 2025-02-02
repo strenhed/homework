@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>форма Фільтр</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+            color: #fff; 
+        }
+
+        h1, h2 {
+            color: #ff6600; 
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #333; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1s ease-out;
+            border-radius: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        label {
+            font-size: 16px;
+            color: #ff6600; 
+        }
+
+        input, select, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #444; 
+            color: #fff; 
+        }
+
+        button {
+            background-color: #ff6600; 
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e65c00; 
+        }
+
+        a {
+            color: #ff6600; 
+            text-decoration: none;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        a:hover {
+            color: #e65c00;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            margin-top: 20px;
+        }
+        @media (max-width: 550px) {
+            .container {
+                padding: 10px;
+            }
+            header, footer {
+                font-size: 14px;
+            }
+        }
+        @media (min-width: 551px) and (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            header, footer {
+                font-size: 16px;
+            }
+        }
+        @media (min-width: 769px) and (max-width: 991px) {
+            .container {
+                padding: 20px;
+            }
+            header, footer {
+                font-size: 18px;
+            }
+        }
+        @media (min-width: 992px) and (max-width: 1440px) {
+            .container {
+                padding: 25px;
+            }
+            header, footer {
+                font-size: 20px;
+            }
+        }
+        @media (min-width: 1441px) {
+            .container {
+                padding: 30px;
+            }
+            header, footer {
+                font-size: 22px;
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        .filter-section {
+            margin-top: 30px;
+        }
+        .filter-section h2 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Реєстрація</h1>
+        <form action="#" method="post">
+            <label for="name">ім'я:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="password">пароль:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label for="confirm_password">повторіть пароль:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+
+            <label for="dob">дата народження:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+
+            <label>Стать:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Чоловік</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Жінка</label><br><br>
+
+            <label for="age">вік:</label>
+            <input type="number" id="age" name="age" required><br><br>
+
+            <label for="description">Опис:</label>
+            <textarea id="description" name="description"></textarea><br><br>
+
+            <button type="submit">зареєструватися</button>
+        </form>
+        <br>
+        <a href="#filter-form">до фільтра</a>
+    </div>
+    <div class="container filter-section" id="filter-form">
+        <h2>фільтр продуктів</h2>
+        <form action="#" method="get">
+            <label for="product_type">тип продукт:</label>
+            <select id="product_type" name="product_type">
+                <option value="phone">Телефон</option>
+                <option value="laptop">Ноутбук</option>
+                <option value="vacuum">Пилосос</option>
+            </select><br><br>
+
+            <label>Потужність:</label><br>
+            <input type="checkbox" id="power_15w" name="power" value="15w">
+            <label for="power_15w">15w</label><br>
+            <input type="checkbox" id="power_25w" name="power" value="25w">
+            <label for="power_25w">25w</label><br>
+            <input type="checkbox" id="power_65w" name="power" value="65w">
+            <label for="power_65w">65w</label><br>
+            <input type="checkbox" id="power_100w" name="power" value="100w">
+            <label for="power_100w">100w</label><br>
+            <input type="checkbox" id="power_200w" name="power" value="200w">
+            <label for="power_200w">200w</label><br><br>
+
+            <label>Марка:</label><br>
+            <input type="checkbox" id="brand_samsung" name="brand" value="samsung">
+            <label for="brand_samsung">Samsung</label><br>
+            <input type="checkbox" id="brand_lg" name="brand" value="lg">
+            <label for="brand_lg">Acer</label><br>
+            <input type="checkbox" id="brand_asus" name="brand" value="asus">
+            <label for="brand_asus">Asus</label><br>
+            <input type="checkbox" id="brand_lenovo" name="brand" value="lenovo">
+            <label for="brand_lenovo">LG</label><br><br>
+
+            <label for="sorting">Сортування:</label>
+            <select id="sorting" name="sorting">
+                <option value="cheapest">від дешевших</option>
+                <option value="expensive">від дорогих</option>
+                <option value="rating">по рейтингу</option>
+            </select><br><br>
+            <label for="model_name">назва моделі:</label>
+            <input type="text" id="model_name" name="model_name"><br><br>
+            <button type="submit">застосувати фільтри</button>
+        </form>
+    </div>
+</body>
+</html>
+

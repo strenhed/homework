@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>верстка</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    border: 5px blue solid;
+    height: 100%;
+}
+
+header{
+    background-color: teal;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1{
+    color: lightyellow;
+    text-align: center;
+    padding: 2px 4px;
+}
+
+.main-header{
+    height: 100px;
+    width: 600px;
+    background-color: navy;
+    border: 40px lightgreen solid;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu{
+    width: 100%;
+    background-color: darkgray;
+    color: lightyellow;
+}
+
+.menu h1{
+    text-align: center;
+    padding: 3px 4px;
+}
+
+.layout{
+    display: flex;
+    width: 100%;
+}
+
+.layout .box{
+    height: 250px;
+    width: 60%;
+}
+
+.color1{
+    background-color: coral;
+}
+
+.color2{
+    background-color: lime;
+}
+
+.color3{
+    background-color: lightblue;
+}
+
+.color4{
+    background-color: violet;
+}
+
+.wrapper{
+    display: flex;
+    height: 440px;
+}
+
+.section{
+    height: 100%;
+    width: 33.33%;
+}
+
+.section-1 h1{
+    text-align: center;
+}
+.menu h1 {
+    text-align: center;
+    padding: 15px 5px;
+}
+
+.section1{
+    background-color: olive;
+    justify-content: space-between;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.main-section1{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: peachpuff;
+    width: 90%;
+    height: 90%;
+}
+
+.inner-section{
+    display: flex;
+    width: 100%;
+    height: 60%;
+    align-self: center;
+}
+
+.inner1{
+    width: 50%;
+    height: 103%;
+    background-color: lavender;
+}
+
+.inner2{
+    width: 50%;
+    height: 103%;
+    background-color: khaki;
+}
+
+.section2{
+    background-color: lightcoral;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-section2{
+    display: flex;
+    width: 100%;
+    height: 70%;
+}
+
+.inner{
+    width: 33.33%;
+    height: 100%;
+}
+
+.block1{
+    background-color: forestgreen;
+}
+
+.block2{
+    background-color: rgb(173, 52, 93);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-block{
+    display: flex;
+    width: 100%;
+    height: 60%;
+    align-items: flex-end;
+}
+
+.block-left{
+    width: 50%;
+    height: 100%;
+    background-color: bisque;
+}
+
+.block-right{
+    width: 50%;
+    height: 50%;
+    background-color: palevioletred;
+}
+
+.block3{
+    background-color: tan;
+}
+
+.section3{
+    background-color: mediumslateblue;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-section3{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 80%;
+}
+
+.subsection1{
+    background-color: lightseagreen;
+    height: 70%;
+    align-self: flex-end;
+}
+
+.subsection2{
+    background-color: lemonchiffon;
+    height: 25%;
+    align-self: center;
+}
+
+.subsection3{
+    background-color: chocolate;
+    height: 60%;
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-block{
+   height: 55%;
+    width: 44%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.text-block h4{
+    background-color: maroon;
+    color: white;
+    padding: 5px 5px;
+}
+
+.align-end{
+    align-self: flex-end;
+}
+
+.align-start{
+    align-self: flex-start;
+}               
+</style>
+<body>
+    <header>
+        <h1>шапка</h1>
+        <div class="main-header">
+        </div>
+    </header>
+    <div class="menu"><h1>Меню</h1></div>
+    <div class="layout">
+        <div class="box color1"></div>
+        <div class="box color2"></div>
+        <div class="box color3"></div>
+        <div class="box color4"></div>
+    </div>
+    <div class="menu"><h1></h1></div>
+    <div class="wrapper">
+        <div class="section section1">
+            <h1>блок 1</h1>
+            <div class="main-section1">
+                <h3>left</h3>
+                <div class="inner-section">
+                    <div class="inner1">
+                        <h3>a-left</h3>
+                    </div>
+                    <div class="inner2">
+                        <h3>b-left</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section2">
+            <h1>блок 2</h1>
+            <div class="main-section2">
+                <div class="inner block1"></div>
+                <div class="inner block2">
+                    <h3>a-enter</h3>
+                    <div class="main-block">
+                        <div class="block-left"><h3>A-C</h3></div>
+                        <div class="block-right"><h3>B-C</h3></div>
+                    </div>
+                </div>
+                <div class="inner block3"></div>
+            </div>
+        </div>
+        <div class="section section3">
+            <h1>блок 3</h1>
+            <div class="main-section3">
+                <div class="inner subsection1"></div>
+                <div class="inner subsection2"></div>
+                <div class="inner subsection3">
+                    <div class="text-block">
+                        <h4 class="align-end">текст</h4>
+                        <h4 class="align-start">текст</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
